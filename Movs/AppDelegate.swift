@@ -22,13 +22,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         let mainScreenViewController = MainScreenViewController()
+        let detailScreenViewController = DetailScreenViewController()
+        let favoritesScreenViewController = FavoritesScreenViewController()
         
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [mainScreenViewController]
+        tabBarController.viewControllers = [mainScreenViewController, favoritesScreenViewController]
+        tabBarController.selectedViewController = mainScreenViewController
         
         let mainScreenTabBarItem = UITabBarItem(title: "Movies", image: UIImage(named:"list_icon"), tag: 0)
-        mainScreenTabBarItem.badgeColor = .darkGray
+        let favoriteScreenTabBarItem = UITabBarItem(title: "Favorites", image: UIImage(named: "favorite_empty_icon"), tag: 0)
         mainScreenViewController.tabBarItem = mainScreenTabBarItem
+        favoritesScreenViewController.tabBarItem = favoriteScreenTabBarItem
         
         let navigationController = UINavigationController(rootViewController: tabBarController)
         

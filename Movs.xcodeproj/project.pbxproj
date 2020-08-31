@@ -13,6 +13,10 @@
 		7605D5AC24FD98030070B9B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7605D5AA24FD98030070B9B9 /* LaunchScreen.storyboard */; };
 		7605D5B624FD98950070B9B9 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605D5B424FD98950070B9B9 /* MainScreenViewController.swift */; };
 		7605D5B724FD98950070B9B9 /* MainScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7605D5B524FD98950070B9B9 /* MainScreenViewController.xib */; };
+		7605D5BB24FDA7B10070B9B9 /* DetailScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605D5B924FDA7B10070B9B9 /* DetailScreenViewController.swift */; };
+		7605D5BC24FDA7B10070B9B9 /* DetailScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7605D5BA24FDA7B10070B9B9 /* DetailScreenViewController.xib */; };
+		7605D5C024FDA7DC0070B9B9 /* FavoritesScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605D5BE24FDA7DC0070B9B9 /* FavoritesScreenViewController.swift */; };
+		7605D5C124FDA7DC0070B9B9 /* FavoritesScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7605D5BF24FDA7DC0070B9B9 /* FavoritesScreenViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		7605D5AD24FD98030070B9B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7605D5B424FD98950070B9B9 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		7605D5B524FD98950070B9B9 /* MainScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreenViewController.xib; sourceTree = "<group>"; };
+		7605D5B924FDA7B10070B9B9 /* DetailScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenViewController.swift; sourceTree = "<group>"; };
+		7605D5BA24FDA7B10070B9B9 /* DetailScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailScreenViewController.xib; sourceTree = "<group>"; };
+		7605D5BE24FDA7DC0070B9B9 /* FavoritesScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesScreenViewController.swift; sourceTree = "<group>"; };
+		7605D5BF24FDA7DC0070B9B9 /* FavoritesScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesScreenViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,8 @@
 		7605D59E24FD98020070B9B9 /* Movs */ = {
 			isa = PBXGroup;
 			children = (
+				7605D5BD24FDA7C00070B9B9 /* FavoritesScreen */,
+				7605D5B824FDA76F0070B9B9 /* DetailScreen */,
 				7605D5B324FD987C0070B9B9 /* MainScreen */,
 				7605D59F24FD98020070B9B9 /* AppDelegate.swift */,
 				7605D5A324FD98020070B9B9 /* ViewController.swift */,
@@ -73,6 +83,24 @@
 				7605D5B524FD98950070B9B9 /* MainScreenViewController.xib */,
 			);
 			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		7605D5B824FDA76F0070B9B9 /* DetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7605D5B924FDA7B10070B9B9 /* DetailScreenViewController.swift */,
+				7605D5BA24FDA7B10070B9B9 /* DetailScreenViewController.xib */,
+			);
+			path = DetailScreen;
+			sourceTree = "<group>";
+		};
+		7605D5BD24FDA7C00070B9B9 /* FavoritesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7605D5BE24FDA7DC0070B9B9 /* FavoritesScreenViewController.swift */,
+				7605D5BF24FDA7DC0070B9B9 /* FavoritesScreenViewController.xib */,
+			);
+			path = FavoritesScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +162,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7605D5AC24FD98030070B9B9 /* LaunchScreen.storyboard in Resources */,
+				7605D5BC24FDA7B10070B9B9 /* DetailScreenViewController.xib in Resources */,
 				7605D5A924FD98030070B9B9 /* Assets.xcassets in Resources */,
+				7605D5C124FDA7DC0070B9B9 /* FavoritesScreenViewController.xib in Resources */,
 				7605D5B724FD98950070B9B9 /* MainScreenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,7 +177,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7605D5A424FD98020070B9B9 /* ViewController.swift in Sources */,
+				7605D5C024FDA7DC0070B9B9 /* FavoritesScreenViewController.swift in Sources */,
 				7605D5A024FD98020070B9B9 /* AppDelegate.swift in Sources */,
+				7605D5BB24FDA7B10070B9B9 /* DetailScreenViewController.swift in Sources */,
 				7605D5B624FD98950070B9B9 /* MainScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
