@@ -20,9 +20,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: screenFrame)
         
-        let viewController = MainScreenViewController()
         
-        window?.rootViewController = viewController
+        let mainScreenViewController = MainScreenViewController()
+        
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [mainScreenViewController]
+        
+        let mainScreenTabBarItem = UITabBarItem(title: "Movies", image: UIImage(named:"list_icon"), tag: 0)
+        mainScreenTabBarItem.badgeColor = .darkGray
+        mainScreenViewController.tabBarItem = mainScreenTabBarItem
+        
+        let navigationController = UINavigationController(rootViewController: tabBarController)
+        
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         
         return true
