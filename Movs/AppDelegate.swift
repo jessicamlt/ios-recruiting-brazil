@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         let mainScreenViewController = MainScreenViewController()
-        let detailScreenViewController = DetailScreenViewController()
         let favoritesScreenViewController = FavoritesScreenViewController()
         
         let tabBarController = UITabBarController()

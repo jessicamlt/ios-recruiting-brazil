@@ -17,6 +17,8 @@
 		7605D5BC24FDA7B10070B9B9 /* DetailScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7605D5BA24FDA7B10070B9B9 /* DetailScreenViewController.xib */; };
 		7605D5C024FDA7DC0070B9B9 /* FavoritesScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605D5BE24FDA7DC0070B9B9 /* FavoritesScreenViewController.swift */; };
 		7605D5C124FDA7DC0070B9B9 /* FavoritesScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7605D5BF24FDA7DC0070B9B9 /* FavoritesScreenViewController.xib */; };
+		7605D5C924FDC57A0070B9B9 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605D5C724FDC57A0070B9B9 /* MovieCollectionViewCell.swift */; };
+		7605D5CA24FDC57A0070B9B9 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7605D5C824FDC57A0070B9B9 /* MovieCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		7605D5BA24FDA7B10070B9B9 /* DetailScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailScreenViewController.xib; sourceTree = "<group>"; };
 		7605D5BE24FDA7DC0070B9B9 /* FavoritesScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesScreenViewController.swift; sourceTree = "<group>"; };
 		7605D5BF24FDA7DC0070B9B9 /* FavoritesScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesScreenViewController.xib; sourceTree = "<group>"; };
+		7605D5C724FDC57A0070B9B9 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		7605D5C824FDC57A0070B9B9 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		7605D5B324FD987C0070B9B9 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				7605D5C224FDC5130070B9B9 /* Cells */,
 				7605D5B424FD98950070B9B9 /* MainScreenViewController.swift */,
 				7605D5B524FD98950070B9B9 /* MainScreenViewController.xib */,
 			);
@@ -101,6 +106,15 @@
 				7605D5BF24FDA7DC0070B9B9 /* FavoritesScreenViewController.xib */,
 			);
 			path = FavoritesScreen;
+			sourceTree = "<group>";
+		};
+		7605D5C224FDC5130070B9B9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7605D5C724FDC57A0070B9B9 /* MovieCollectionViewCell.swift */,
+				7605D5C824FDC57A0070B9B9 /* MovieCollectionViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +180,7 @@
 				7605D5A924FD98030070B9B9 /* Assets.xcassets in Resources */,
 				7605D5C124FDA7DC0070B9B9 /* FavoritesScreenViewController.xib in Resources */,
 				7605D5B724FD98950070B9B9 /* MainScreenViewController.xib in Resources */,
+				7605D5CA24FDC57A0070B9B9 /* MovieCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +194,7 @@
 				7605D5A424FD98020070B9B9 /* ViewController.swift in Sources */,
 				7605D5C024FDA7DC0070B9B9 /* FavoritesScreenViewController.swift in Sources */,
 				7605D5A024FD98020070B9B9 /* AppDelegate.swift in Sources */,
+				7605D5C924FDC57A0070B9B9 /* MovieCollectionViewCell.swift in Sources */,
 				7605D5BB24FDA7B10070B9B9 /* DetailScreenViewController.swift in Sources */,
 				7605D5B624FD98950070B9B9 /* MainScreenViewController.swift in Sources */,
 			);
