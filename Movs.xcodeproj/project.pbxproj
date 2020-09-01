@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		7605D5CA24FDC57A0070B9B9 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7605D5C824FDC57A0070B9B9 /* MovieCollectionViewCell.xib */; };
 		7605D5CE24FDCD750070B9B9 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605D5CC24FDCD750070B9B9 /* FavoriteTableViewCell.swift */; };
 		7605D5CF24FDCD750070B9B9 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7605D5CD24FDCD750070B9B9 /* FavoriteTableViewCell.xib */; };
+		7605D5D224FED72C0070B9B9 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605D5D124FED72C0070B9B9 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		7605D5C824FDC57A0070B9B9 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
 		7605D5CC24FDCD750070B9B9 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		7605D5CD24FDCD750070B9B9 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
+		7605D5D124FED72C0070B9B9 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		B47423A028E07F239AE83F18 /* Pods-Movs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movs.debug.xcconfig"; path = "Target Support Files/Pods-Movs/Pods-Movs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,7 +74,6 @@
 				B47423A028E07F239AE83F18 /* Pods-Movs.debug.xcconfig */,
 				336DA6D4C7DD99EFB1C70EA3 /* Pods-Movs.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -97,6 +98,7 @@
 		7605D59E24FD98020070B9B9 /* Movs */ = {
 			isa = PBXGroup;
 			children = (
+				7605D5D024FED7150070B9B9 /* Model */,
 				7605D5BD24FDA7C00070B9B9 /* FavoritesScreen */,
 				7605D5B824FDA76F0070B9B9 /* DetailScreen */,
 				7605D5B324FD987C0070B9B9 /* MainScreen */,
@@ -154,6 +156,14 @@
 				7605D5CD24FDCD750070B9B9 /* FavoriteTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		7605D5D024FED7150070B9B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7605D5D124FED72C0070B9B9 /* Movie.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +291,7 @@
 				7605D5C924FDC57A0070B9B9 /* MovieCollectionViewCell.swift in Sources */,
 				7605D5BB24FDA7B10070B9B9 /* DetailScreenViewController.swift in Sources */,
 				7605D5CE24FDCD750070B9B9 /* FavoriteTableViewCell.swift in Sources */,
+				7605D5D224FED72C0070B9B9 /* Movie.swift in Sources */,
 				7605D5B624FD98950070B9B9 /* MainScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
