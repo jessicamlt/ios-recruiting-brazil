@@ -9,6 +9,10 @@
 import UIKit
 
 class FavoritesScreenViewController: UIViewController {
+    
+    @IBOutlet var searchBar: UISearchBar!
+    @IBOutlet var tableView: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +24,8 @@ class FavoritesScreenViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        tabBarController?.title = "Favorites"
-    }
+        tabBarController?.title = "Movies"
+        }
 
 
 }

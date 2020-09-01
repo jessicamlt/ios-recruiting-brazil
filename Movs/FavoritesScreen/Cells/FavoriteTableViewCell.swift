@@ -1,5 +1,5 @@
 //
-//  MovieCollectionViewCell.swift
+//  FavoriteTableViewCell.swift
 //  Movs
 //
 //  Created by Jéssica Trindade on 31/08/20.
@@ -8,11 +8,12 @@
 
 import UIKit
 
-class MovieCollectionViewCell: UICollectionViewCell {
+class FavoriteTableViewCell: UITableViewCell {
     
     @IBOutlet var coverImageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var favoriteButton: UIButton!
+    @IBOutlet var releaseYearLabel: UILabel!
+    @IBOutlet var overviewLabel: UILabel!
     
 
     override func awakeFromNib() {
@@ -20,7 +21,10 @@ class MovieCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
-    @IBAction func makeFavorite(_ sender: Any) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
     }
     
 }

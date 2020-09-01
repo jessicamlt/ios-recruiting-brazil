@@ -35,6 +35,9 @@
                                     <constraint firstAttribute="width" secondItem="hte-qI-mUl" secondAttribute="height" multiplier="1:1" id="4je-Q1-e0E"/>
                                 </constraints>
                                 <state key="normal" image="favorite_gray_icon"/>
+                                <connections>
+                                    <action selector="makeFavorite:" destination="gTV-IL-0wX" eventType="touchUpInside" id="TK2-kL-wRj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="azul"/>
@@ -65,6 +68,11 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="187" height="289"/>
+            <connections>
+                <outlet property="coverImageView" destination="J7H-cU-rLB" id="LuX-uv-Jqq"/>
+                <outlet property="favoriteButton" destination="hte-qI-mUl" id="mwM-Ai-2sY"/>
+                <outlet property="titleLabel" destination="u16-Yz-syB" id="GZJ-bU-iXh"/>
+            </connections>
             <point key="canvasLocation" x="236.23188405797103" y="138.95089285714286"/>
         </collectionViewCell>
     </objects>
