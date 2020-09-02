@@ -9,9 +9,15 @@
 import Foundation
 
 class MoviesModel {
-    func getMovies(onComplete: @escaping ([Movie]) -> Void) {
-        REST.getMovies(onComplete: { (movies) in
-            onComplete(movies)
+    private let rest: RESTProtocol
+    
+    init(rest: RESTProtocol = REST()) {
+        self.rest = rest
+    }
+    
+    func getMovies(onComplete: @escaping (BaseData) -> Void) {
+        rest.getMovies(onComplete: { (baseData) in
+            onComplete(baseData)
         }) { (error) in
             switch error {
             case .invalidJSON:
