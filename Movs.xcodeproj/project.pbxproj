@@ -23,7 +23,19 @@
 		7605D5CE24FDCD750070B9B9 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605D5CC24FDCD750070B9B9 /* FavoriteTableViewCell.swift */; };
 		7605D5CF24FDCD750070B9B9 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7605D5CD24FDCD750070B9B9 /* FavoriteTableViewCell.xib */; };
 		7605D5D224FED72C0070B9B9 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605D5D124FED72C0070B9B9 /* Movie.swift */; };
+		7605D5DA24FEE0F40070B9B9 /* MovsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605D5D924FEE0F40070B9B9 /* MovsTests.swift */; };
+		7605D5E324FEE12F0070B9B9 /* MovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605D5E224FEE12F0070B9B9 /* MovieTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7605D5DC24FEE0F40070B9B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7605D59424FD98020070B9B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7605D59B24FD98020070B9B9;
+			remoteInfo = Movs;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		336DA6D4C7DD99EFB1C70EA3 /* Pods-Movs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movs.release.xcconfig"; path = "Target Support Files/Pods-Movs/Pods-Movs.release.xcconfig"; sourceTree = "<group>"; };
@@ -45,6 +57,10 @@
 		7605D5CC24FDCD750070B9B9 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		7605D5CD24FDCD750070B9B9 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
 		7605D5D124FED72C0070B9B9 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		7605D5D724FEE0F40070B9B9 /* MovsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7605D5D924FEE0F40070B9B9 /* MovsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovsTests.swift; sourceTree = "<group>"; };
+		7605D5DB24FEE0F40070B9B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7605D5E224FEE12F0070B9B9 /* MovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTests.swift; sourceTree = "<group>"; };
 		B47423A028E07F239AE83F18 /* Pods-Movs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movs.debug.xcconfig"; path = "Target Support Files/Pods-Movs/Pods-Movs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +70,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F3FC61FD8964490F0A10638 /* Pods_Movs.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7605D5D424FEE0F40070B9B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				7605D59E24FD98020070B9B9 /* Movs */,
+				7605D5D824FEE0F40070B9B9 /* MovsTests */,
 				7605D59D24FD98020070B9B9 /* Products */,
 				44BB02911D71706F40A65D61 /* Pods */,
 				19909DA9F78C2B2FE6C5B70B /* Frameworks */,
@@ -91,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				7605D59C24FD98020070B9B9 /* Movs.app */,
+				7605D5D724FEE0F40070B9B9 /* MovsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,6 +191,24 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		7605D5D824FEE0F40070B9B9 /* MovsTests */ = {
+			isa = PBXGroup;
+			children = (
+				7605D5E124FEE1030070B9B9 /* Model */,
+				7605D5D924FEE0F40070B9B9 /* MovsTests.swift */,
+				7605D5DB24FEE0F40070B9B9 /* Info.plist */,
+			);
+			path = MovsTests;
+			sourceTree = "<group>";
+		};
+		7605D5E124FEE1030070B9B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7605D5E224FEE12F0070B9B9 /* MovieTests.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,6 +231,24 @@
 			productReference = 7605D59C24FD98020070B9B9 /* Movs.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7605D5D624FEE0F40070B9B9 /* MovsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7605D5DE24FEE0F40070B9B9 /* Build configuration list for PBXNativeTarget "MovsTests" */;
+			buildPhases = (
+				7605D5D324FEE0F40070B9B9 /* Sources */,
+				7605D5D424FEE0F40070B9B9 /* Frameworks */,
+				7605D5D524FEE0F40070B9B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7605D5DD24FEE0F40070B9B9 /* PBXTargetDependency */,
+			);
+			name = MovsTests;
+			productName = MovsTests;
+			productReference = 7605D5D724FEE0F40070B9B9 /* MovsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,6 +261,10 @@
 				TargetAttributes = {
 					7605D59B24FD98020070B9B9 = {
 						CreatedOnToolsVersion = 11.6;
+					};
+					7605D5D624FEE0F40070B9B9 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 7605D59B24FD98020070B9B9;
 					};
 				};
 			};
@@ -217,6 +282,7 @@
 			projectRoot = "";
 			targets = (
 				7605D59B24FD98020070B9B9 /* Movs */,
+				7605D5D624FEE0F40070B9B9 /* MovsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,6 +299,13 @@
 				7605D5B724FD98950070B9B9 /* MainScreenViewController.xib in Resources */,
 				7605D5CF24FDCD750070B9B9 /* FavoriteTableViewCell.xib in Resources */,
 				7605D5CA24FDC57A0070B9B9 /* MovieCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7605D5D524FEE0F40070B9B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +369,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7605D5D324FEE0F40070B9B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7605D5E324FEE12F0070B9B9 /* MovieTests.swift in Sources */,
+				7605D5DA24FEE0F40070B9B9 /* MovsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7605D5DD24FEE0F40070B9B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7605D59B24FD98020070B9B9 /* Movs */;
+			targetProxy = 7605D5DC24FEE0F40070B9B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7605D5AA24FD98030070B9B9 /* LaunchScreen.storyboard */ = {
@@ -462,6 +552,46 @@
 			};
 			name = Release;
 		};
+		7605D5DF24FEE0F40070B9B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L442N5GXM2;
+				INFOPLIST_FILE = MovsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = trindade.jessica.MovsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Movs.app/Movs";
+			};
+			name = Debug;
+		};
+		7605D5E024FEE0F40070B9B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L442N5GXM2;
+				INFOPLIST_FILE = MovsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = trindade.jessica.MovsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Movs.app/Movs";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -479,6 +609,15 @@
 			buildConfigurations = (
 				7605D5B124FD98030070B9B9 /* Debug */,
 				7605D5B224FD98030070B9B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7605D5DE24FEE0F40070B9B9 /* Build configuration list for PBXNativeTarget "MovsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7605D5DF24FEE0F40070B9B9 /* Debug */,
+				7605D5E024FEE0F40070B9B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

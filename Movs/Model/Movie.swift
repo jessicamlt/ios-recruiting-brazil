@@ -30,7 +30,7 @@ extension Movie {
         return baseURL + size + (posterPath ?? "")
     }
     
-    var getReleaseYear: String {
+    var releaseYear: String {
         let fullDate = (releaseDate ?? "").components(separatedBy: "-")
         return fullDate.first ?? ""
     }
