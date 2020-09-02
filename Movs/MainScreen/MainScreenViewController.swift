@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MainScreenViewController: UIViewController {
     
@@ -16,6 +17,8 @@ class MainScreenViewController: UIViewController {
     var baseData = BaseData()
     var movies: [Movie] = []
     var moviesModel = MoviesModel()
+    var basePath = "https://image.tmdb.org/t/p"
+    var coverSize = "/w185"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +64,12 @@ extension MainScreenViewController: UICollectionViewDataSource {
         let movie = movies[indexPath.row]
         cell.titleLabel.text = movie.title
         
+        let coverPath = movies[indexPath.row].posterPath
+        if let url = URL(string: basePath + coverSize + (coverPath ?? "")) {
+            cell.coverImageView.kf.setImage(with: url)
+        } else {
+            cell.coverImageView.image = UIImage(named: "placeholder")
+        }
         
         return cell
     }

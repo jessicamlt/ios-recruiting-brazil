@@ -65,6 +65,7 @@
 		7605D5E224FEE12F0070B9B9 /* MovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTests.swift; sourceTree = "<group>"; };
 		762B47C024FFD38900CF610E /* REST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
 		762B47C324FFD8B200CF610E /* MoviesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesModel.swift; sourceTree = "<group>"; };
+		763A4623250025F000A8CF5C /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B47423A028E07F239AE83F18 /* Pods-Movs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movs.debug.xcconfig"; path = "Target Support Files/Pods-Movs/Pods-Movs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +91,7 @@
 		19909DA9F78C2B2FE6C5B70B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				763A4623250025F000A8CF5C /* Kingfisher.framework */,
 				6314AD726F8A80A34C511C1D /* Pods_Movs.framework */,
 			);
 			name = Frameworks;
