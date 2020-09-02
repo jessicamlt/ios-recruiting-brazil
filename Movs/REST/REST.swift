@@ -18,7 +18,7 @@ enum BaseDataError {
 }
 
 protocol RESTProtocol {
-    func getMovies(onComplete: @escaping (BaseData) -> Void, onError: @escaping (BaseDataError) -> Void)
+    func getMovies(page: Int, onComplete: @escaping (BaseData) -> Void, onError: @escaping (BaseDataError) -> Void)
 }
 
 class REST: RESTProtocol {
@@ -26,12 +26,17 @@ class REST: RESTProtocol {
     private let basePath = "https://api.themoviedb.org/3/trending"
     private let mediaType = "/movie"
     private let timeWindow = "/week"
-    private let privateKey = "?api_key=f6f65fb2af513727cf97296cf7f31f0c"
     private let session = URLSession.shared
     
     // MARK: - GET
     
-    func getMovies(onComplete: @escaping (BaseData) -> Void, onError: @escaping (BaseDataError) -> Void) {
+    func getMovies(page: Int, onComplete: @escaping (BaseData) -> Void, onError: @escaping (BaseDataError) -> Void) {
+        
+        var privateKey: String {
+            return "?page=\(page)&api_key=f6f65fb2af513727cf97296cf7f31f0c"
+        }
+        
+        
         guard let url = URL(string: basePath + mediaType + timeWindow + privateKey) else {
             onError(.url)
             return

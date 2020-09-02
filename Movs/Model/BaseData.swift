@@ -9,6 +9,7 @@
 import Foundation
 
 struct BaseData: Decodable {
+    var totalResults: Int
     var results: [Movie]?
 }
 

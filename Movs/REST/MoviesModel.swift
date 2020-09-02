@@ -15,8 +15,8 @@ class MoviesModel {
         self.rest = rest
     }
     
-    func getMovies(onComplete: @escaping (BaseData) -> Void) {
-        rest.getMovies(onComplete: { (baseData) in
+    func getMovies(page: Int, onComplete: @escaping (BaseData) -> Void) {
+        rest.getMovies(page: page, onComplete: { (baseData) in
             onComplete(baseData)
         }) { (error) in
             switch error {

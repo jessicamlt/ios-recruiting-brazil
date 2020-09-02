@@ -14,22 +14,18 @@ class MainScreenViewController: UIViewController {
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var collectionView: UICollectionView!
     
-    var baseData = BaseData()
+    var baseData: BaseData?
     var movies: [Movie] = []
     var moviesModel = MoviesModel()
     var basePath = "https://image.tmdb.org/t/p"
     var coverSize = "/w185"
+    var loadingMovies = false
+    var page = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setupCollectionView()
-        moviesModel.getMovies { (baseData) in
-            self.movies = baseData.results ?? []
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-        }
+        loadMovies()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,6 +33,20 @@ class MainScreenViewController: UIViewController {
         
         tabBarController?.title = "Movies"
     }
+    
+    func loadMovies() {
+        loadingMovies = true
+        setupCollectionView()
+        moviesModel.getMovies(page: self.page) { (baseData) in
+            self.baseData = baseData
+            self.movies.append(contentsOf: baseData.results ?? [])
+            DispatchQueue.main.async {
+                self.loadingMovies = false
+                self.collectionView.reloadData()
+            }
+        }
+    }
+    
     
     func setupCollectionView() {
         let nib = UINib(nibName: "MovieCollectionViewCell", bundle: nil)
@@ -76,5 +86,10 @@ extension MainScreenViewController: UICollectionViewDataSource {
 }
 
 extension MainScreenViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == movies.count - 5 && !loadingMovies && movies.count <= baseData?.totalResults ?? 0 {
+            page += 1
+            loadMovies()
+        }
+    }
 }
