@@ -8,12 +8,13 @@
 
 import Foundation
 
-struct BaseData: Decodable {
+struct BaseData: Codable {
     var totalResults: Int
     var results: [Movie]?
 }
 
-struct Movie: Decodable {
+struct Movie: Codable {
+    var id: Int?
     var title: String?
     var overview: String?
     var posterPath: String?

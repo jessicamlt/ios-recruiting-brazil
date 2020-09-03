@@ -8,11 +8,23 @@
 
 import UIKit
 
+protocol MovieCollectionViewCellDelegate: AnyObject {
+    func favoritedMovie(movie: Movie?)
+}
+
 class MovieCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var coverImageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var favoriteButton: UIButton!
+    
+    weak var delegate: MovieCollectionViewCellDelegate?
+    
+    var movie: Movie? = nil {
+        didSet {
+            update()
+        }
+    }
     
 
     override func awakeFromNib() {
@@ -21,6 +33,13 @@ class MovieCollectionViewCell: UICollectionViewCell {
     }
 
     @IBAction func makeFavorite(_ sender: Any) {
+        delegate?.favoritedMovie(movie: movie)
+    }
+    
+    private func update() {
+        titleLabel.text = movie?.title
+        
     }
     
 }
+

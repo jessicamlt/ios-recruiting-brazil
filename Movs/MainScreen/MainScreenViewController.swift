@@ -25,6 +25,7 @@ class MainScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadMovies()
+        print(Bundle.main.resourceURL)
         
     }
     
@@ -71,9 +72,9 @@ extension MainScreenViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? MovieCollectionViewCell else {
             fatalError("Célula não encontrada")
         }
-        
+        cell.delegate = self
         let movie = movies[indexPath.row]
-        cell.titleLabel.text = movie.title
+        cell.movie = movie
         
         let coverPath = movies[indexPath.row].posterPath
         if let url = URL(string: basePath + coverSize + (coverPath ?? "")) {
@@ -116,4 +117,10 @@ extension MainScreenViewController: UICollectionViewDelegateFlowLayout {
     }
     
     
+}
+
+extension MainScreenViewController: MovieCollectionViewCellDelegate {
+    func favoritedMovie(movie: Movie?) {
+        print(movie)
+    }
 }

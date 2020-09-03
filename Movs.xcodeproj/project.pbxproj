@@ -27,6 +27,7 @@
 		7605D5E324FEE12F0070B9B9 /* MovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605D5E224FEE12F0070B9B9 /* MovieTests.swift */; };
 		762B47C124FFD38900CF610E /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B47C024FFD38900CF610E /* REST.swift */; };
 		762B47C424FFD8B200CF610E /* MoviesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B47C324FFD8B200CF610E /* MoviesModel.swift */; };
+		763A46292501901E00A8CF5C /* FavoriteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763A46282501901E00A8CF5C /* FavoriteManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		762B47C024FFD38900CF610E /* REST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
 		762B47C324FFD8B200CF610E /* MoviesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesModel.swift; sourceTree = "<group>"; };
 		763A4623250025F000A8CF5C /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		763A46282501901E00A8CF5C /* FavoriteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteManager.swift; sourceTree = "<group>"; };
 		B47423A028E07F239AE83F18 /* Pods-Movs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movs.debug.xcconfig"; path = "Target Support Files/Pods-Movs/Pods-Movs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				7605D5D124FED72C0070B9B9 /* BaseData.swift */,
+				763A46282501901E00A8CF5C /* FavoriteManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				762B47C424FFD8B200CF610E /* MoviesModel.swift in Sources */,
 				7605D5A024FD98020070B9B9 /* AppDelegate.swift in Sources */,
 				7605D5C924FDC57A0070B9B9 /* MovieCollectionViewCell.swift in Sources */,
+				763A46292501901E00A8CF5C /* FavoriteManager.swift in Sources */,
 				762B47C124FFD38900CF610E /* REST.swift in Sources */,
 				7605D5BB24FDA7B10070B9B9 /* DetailScreenViewController.swift in Sources */,
 				7605D5CE24FDCD750070B9B9 /* FavoriteTableViewCell.swift in Sources */,
