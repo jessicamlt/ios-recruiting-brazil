@@ -20,6 +20,14 @@ class FavoriteManager {
         return URL(fileURLWithPath: path)
     }
     
+    init() {
+        guard let movies = self.read() else {
+            return
+        }
+        
+        favoriteList = movies
+    }
+    
     func addMoviesInFavoriteList(_ movie: Movie) {
         favoriteList.append(movie)
         save()

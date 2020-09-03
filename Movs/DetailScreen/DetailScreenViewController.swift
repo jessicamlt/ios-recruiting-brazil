@@ -21,6 +21,7 @@ class DetailScreenViewController: UIViewController {
     var movie = Movie()
     var basePath = "https://image.tmdb.org/t/p"
     var coverSize = "/w185"
+    var favoriteManager = FavoriteManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +41,10 @@ class DetailScreenViewController: UIViewController {
     }
     
     
-
+    @IBAction func makeFavorite(_ sender: UIButton) {
+        favoriteManager.addMoviesInFavoriteList(movie)
+    }
+    
     
 
 }
