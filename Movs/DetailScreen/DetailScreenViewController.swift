@@ -29,6 +29,7 @@ class DetailScreenViewController: UIViewController {
         titleLabel.text = movie.title
         releaseYearLabel.text = movie.releaseYear
         overviewTextView.text = movie.overview
+        typeDescriptionLabel.text = movie.genres.joined(separator: ", ")
         
         if let url = URL(string: basePath + coverSize + (movie.posterPath ?? "")) {
             coverImageView.kf.setImage(with: url)
