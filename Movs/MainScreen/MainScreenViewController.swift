@@ -21,11 +21,12 @@ class MainScreenViewController: UIViewController {
     var coverSize = "/w185"
     var loadingMovies = false
     var page = 1
+    var favoriteManager = FavoriteManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         loadMovies()
-        print(Bundle.main.resourceURL)
+        print(NSHomeDirectory())
         
     }
     
@@ -121,6 +122,12 @@ extension MainScreenViewController: UICollectionViewDelegateFlowLayout {
 
 extension MainScreenViewController: MovieCollectionViewCellDelegate {
     func favoritedMovie(movie: Movie?) {
-        print(movie)
+        guard let movie = movie else {
+            print("Erro ao desembrulhar Movie")
+            return
+        }
+        
+        favoriteManager.addMoviesInFavoriteList(movie)
+        
     }
 }

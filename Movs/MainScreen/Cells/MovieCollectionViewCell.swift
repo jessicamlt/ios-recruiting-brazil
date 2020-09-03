@@ -25,6 +25,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
             update()
         }
     }
+    var favoriteManager = FavoriteManager()
     
 
     override func awakeFromNib() {

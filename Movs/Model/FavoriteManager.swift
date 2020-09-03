@@ -10,9 +10,20 @@ import Foundation
 
 
 class FavoriteManager {
-    var favoriteList: [Movie] = []
-    var filename: String = "favoriteList"
-    var destination: String = "/Documents"
+    private var favoriteList: [Movie] = []
+    private var filename: String = "favoriteList"
+    private var destination: String = "/Documents"
+    private var path: String {
+        return NSHomeDirectory() + destination + "/" + filename
+    }
+    private var url: URL {
+        return URL(fileURLWithPath: path)
+    }
+    
+    func addMoviesInFavoriteList(_ movie: Movie) {
+        favoriteList.append(movie)
+        save()
+    }
         
     func save() {
         let encoder = JSONEncoder()
@@ -23,8 +34,6 @@ class FavoriteManager {
         }
 
         do {
-            let path = destination + "/" + filename
-            let url = URL(fileURLWithPath: path)
             try data.write(to: url)
             return
         } catch {
@@ -34,9 +43,6 @@ class FavoriteManager {
     }
     
     func read() -> [Movie]? {
-        let path = destination + "/" + filename
-        let url = URL(fileURLWithPath: path)
-        
         guard let data = try? Data(contentsOf: url) else {
             print("Erro em converter arquivo em Data")
             return nil
