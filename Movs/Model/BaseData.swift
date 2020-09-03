@@ -8,19 +8,18 @@
 
 import Foundation
 
+struct BaseData: Decodable {
+    var totalResults: Int
+    var results: [Movie]?
+}
 
-class Movie: Decodable {
-    var originalTitle: String?
+struct Movie: Decodable {
+    var title: String?
     var overview: String?
     var posterPath: String?
     var releaseDate: String?
-    var genres: [Genre]?
+    var genre_ids: [Int]?
     
-}
-
-class Genre: Codable {
-    var id: Int?
-    var name: String?
 }
 
 extension Movie {
