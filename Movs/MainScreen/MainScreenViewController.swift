@@ -93,6 +93,12 @@ extension MainScreenViewController: UICollectionViewDelegate {
             loadMovies()
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let viewController = DetailScreenViewController()
+        viewController.movie = movies[indexPath.row]
+        present(viewController, animated: true, completion: nil)
+    }
 }
 
 extension MainScreenViewController: UICollectionViewDelegateFlowLayout {
