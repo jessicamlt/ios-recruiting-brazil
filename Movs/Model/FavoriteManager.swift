@@ -28,10 +28,19 @@ class FavoriteManager {
         favoriteList = movies
     }
     
+    
     func addMoviesInFavoriteList(_ movie: Movie) {
-        favoriteList.append(movie)
-        save()
+       
+       let hasMovie = favoriteList.filter { (favoriteMovie) -> Bool in
+            return movie.id == favoriteMovie.id
+        }.isEmpty
+        
+        if hasMovie {
+            favoriteList.append(movie)
+            save()
+        }
     }
+     
         
     func save() {
         let encoder = JSONEncoder()

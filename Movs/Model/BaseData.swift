@@ -9,6 +9,7 @@
 import Foundation
 
 struct BaseData: Codable {
+    
     var totalResults: Int
     var results: [Movie]?
 }
