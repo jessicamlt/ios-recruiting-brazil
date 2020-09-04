@@ -85,3 +85,7 @@ extension FavoritesScreenViewController: UITableViewDataSource {
     
     
 }
+
+extension FavoriteTableViewCell: UITableViewDelegate {
+    
+}
