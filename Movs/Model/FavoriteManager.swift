@@ -20,12 +20,12 @@ class FavoriteManager {
         return URL(fileURLWithPath: path)
     }
     
+    var movies: [Movie] {
+        return favoriteList
+    }
+    
     init() {
-        guard let movies = self.read() else {
-            return
-        }
-        
-        favoriteList = movies
+        refresh()
     }
     
     
@@ -33,12 +33,19 @@ class FavoriteManager {
        
        let hasMovie = favoriteList.filter { (favoriteMovie) -> Bool in
             return movie.id == favoriteMovie.id
-        }.isEmpty
+        }
         
-        if hasMovie {
+        if hasMovie.isEmpty {
             favoriteList.append(movie)
             save()
+        } else {
+            favoriteList = favoriteList.filter({ (favoriteMovie) -> Bool in
+                return movie.id != favoriteMovie.id
+            })
+            save()
         }
+        
+        
     }
      
         
@@ -73,5 +80,13 @@ class FavoriteManager {
         }
         
         return movies
+    }
+    
+    func refresh() {
+       guard let movies = self.read() else {
+            return
+        }
+        
+        favoriteList = movies
     }
 }

@@ -35,6 +35,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
 
     @IBAction func makeFavorite(_ sender: Any) {
         delegate?.favoritedMovie(movie: movie)
+        
     }
     
     private func update() {

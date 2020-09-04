@@ -36,6 +36,11 @@ class MainScreenViewController: UIViewController {
         tabBarController?.title = "Movies"
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        favoriteManager.refresh()
+    }
+    
     func loadMovies() {
         loadingMovies = true
         setupCollectionView()
