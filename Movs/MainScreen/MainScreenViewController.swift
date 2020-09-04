@@ -133,6 +133,6 @@ extension MainScreenViewController: MovieCollectionViewCellDelegate {
         }
         
         favoriteManager.addMoviesInFavoriteList(movie)
-        
+        collectionView.reloadData()
     }
 }

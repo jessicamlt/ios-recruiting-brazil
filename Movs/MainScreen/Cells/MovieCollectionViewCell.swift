@@ -34,13 +34,30 @@ class MovieCollectionViewCell: UICollectionViewCell {
     }
 
     @IBAction func makeFavorite(_ sender: Any) {
+        changeButtonType()
         delegate?.favoritedMovie(movie: movie)
         
     }
     
     private func update() {
         titleLabel.text = movie?.title
+        changeButtonType()
+    }
+    
+    func changeButtonType() {
+        guard let movie = movie else {
+            return
+        }
         
+        let hasMovie = favoriteManager.movies.filter { (favoriteMovie) -> Bool in
+            return movie.id == favoriteMovie.id
+        }
+        
+        if hasMovie.isEmpty {
+            favoriteButton.setImage(UIImage(named: "favorite_gray_icon"), for: .normal)
+        } else {
+            favoriteButton.setImage(UIImage(named: "favorite_full_icon"), for: .normal)
+        }
     }
     
 }

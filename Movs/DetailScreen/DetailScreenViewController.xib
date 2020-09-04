@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailScreenViewController" customModule="Movs" customModuleProvider="target">
             <connections>
                 <outlet property="coverImageView" destination="YDJ-yQ-RYl" id="BeW-6i-Xoc"/>
+                <outlet property="favoriteButton" destination="hh3-ne-b1k" id="6SO-uS-94f"/>
                 <outlet property="overviewTextView" destination="rN8-Et-7HY" id="pzX-D4-8eS"/>
                 <outlet property="releaseYearLabel" destination="QD6-pA-85s" id="mjg-Lw-ge3"/>
                 <outlet property="titleLabel" destination="fnZ-OB-Z1d" id="niP-wF-6jX"/>

@@ -16,6 +16,7 @@ class DetailScreenViewController: UIViewController {
     @IBOutlet var releaseYearLabel: UILabel!
     @IBOutlet var typeDescriptionLabel: UILabel!
     @IBOutlet var overviewTextView: UITextView!
+    @IBOutlet var favoriteButton: UIButton!
     
     
     var movie = Movie()
@@ -38,13 +39,25 @@ class DetailScreenViewController: UIViewController {
             coverImageView.image = UIImage(named: "placeholder")
         }
         
+        changeButtonType()
     }
     
     
     @IBAction func makeFavorite(_ sender: UIButton) {
         favoriteManager.addMoviesInFavoriteList(movie)
+        changeButtonType()
     }
     
-    
+    func changeButtonType() {
+        let hasMovie = favoriteManager.movies.filter { (favoriteMovie) -> Bool in
+            return movie.id == favoriteMovie.id
+        }
+        
+        if hasMovie.isEmpty {
+            favoriteButton.setImage(UIImage(named: "favorite_empty_icon"), for: .normal)
+        } else {
+            favoriteButton.setImage(UIImage(named: "favorite_full_icon"), for: .normal)
+        }
+    }
 
 }
