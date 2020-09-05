@@ -54,6 +54,7 @@ class FavoritesScreenViewController: UIViewController {
         let nib = UINib(nibName: "FavoriteTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "cell2")
         tableView.dataSource = self
+        tableView.delegate = self
     }
 
 }
@@ -86,4 +87,10 @@ extension FavoritesScreenViewController: UITableViewDataSource {
     
 }
 
-
+extension FavoritesScreenViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewController = DetailScreenViewController()
+        viewController.movie = favoriteManager.movies[indexPath.row]
+        tabBarController?.navigationController?.pushViewController(viewController, animated: true)
+    }
+}

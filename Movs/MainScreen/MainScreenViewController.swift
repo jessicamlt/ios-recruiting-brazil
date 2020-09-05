@@ -93,6 +93,7 @@ extension MainScreenViewController: UICollectionViewDataSource {
     }
 }
 
+
 extension MainScreenViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if indexPath.row == movies.count - 5 && !loadingMovies && movies.count <= baseData?.totalResults ?? 0 {
@@ -104,7 +105,7 @@ extension MainScreenViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let viewController = DetailScreenViewController()
         viewController.movie = movies[indexPath.row]
-        present(viewController, animated: true, completion: nil)
+        tabBarController?.navigationController?.pushViewController(viewController, animated: true)
     }
 }
 

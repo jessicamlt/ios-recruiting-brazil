@@ -30,12 +30,12 @@ class MovieCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       
     }
 
     @IBAction func makeFavorite(_ sender: Any) {
-        changeButtonType()
         delegate?.favoritedMovie(movie: movie)
+        changeButtonType()
         
     }
     
@@ -57,6 +57,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
             favoriteButton.setImage(UIImage(named: "favorite_gray_icon"), for: .normal)
         } else {
             favoriteButton.setImage(UIImage(named: "favorite_full_icon"), for: .normal)
+            
         }
     }
     
